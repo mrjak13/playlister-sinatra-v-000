@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/songs/:slug' do
-    binding.pry
+    # binding.pry
     @song = Song.find_by_slug(params[:slug])
     @song.update(name: params[:songs][:name], artist: Artist.find_by(name:params[:songs][:artist][:name]))
     @song.genres.clear
