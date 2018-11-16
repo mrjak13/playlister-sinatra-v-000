@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
       @song.genres << Genre.find(genre)
     end
 
-    # binding.pry
+    binding.pry
     redirect :"/songs/#{params[:slug]}"
   end
 end
