@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
     @song = Song.find_by_slug(params[:slug])
 
     artist_name = params[:artist_name]
-    
+
     if Artist.find_by(name: artist_name)
       @artist = Artist.find_by(name: artist_name)
     else
